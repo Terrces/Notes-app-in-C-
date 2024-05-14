@@ -1,0 +1,39 @@
+﻿<Window x:Class="Practicka.Authorization.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practicka.Authorization"
+        mc:Ignorable="d"
+        
+        Title="Логин"  Height="248.522" Width="371" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" SizeToContent="Height" FontFamily="Calibri Light" WindowStyle="None" KeyUp="Window_KeyUp" FontSize="16" Background="White" Icon="/Practicka;component/Other/www.ico">
+    <Grid Margin="5,0,5,-43">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Margin="-5,0,-4,265" Padding="15,5,0,0" MouseLeftButtonDown="Label_MouseLeftButtonDown" Cursor="Arrow">Авторизация</Label>
+        <Label Name="PasswordText" Margin="4,104,-1,155" FontSize="21" HorizontalContentAlignment="Left" FontFamily="Calibri Light" Content="Пароль" />
+        <StackPanel Margin="0,27,0,48">
+            <TextBox x:Name="login" Text="Логин" Margin="0,18,0,5" Height="46" FontSize="20" Padding="10,10,10,10" MaxLength="40" Cursor="IBeam" FontFamily="Calibri Light" GotFocus="login_GotFocus" LostFocus="login_LostFocus" Background="{x:Null}">
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Offset="0.939"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+            </TextBox>
+
+            <PasswordBox x:Name="password" Height="42" FontSize="16" Padding="10,10,10,10" MaxLength="38" Cursor="IBeam" FontFamily="Calibri Light" Background="{x:Null}" GotFocus="password_GotFocus" LostFocus="password_LostFocus">
+                <PasswordBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="1"/>
+                        <GradientStop Offset="0.939"/>
+                    </LinearGradientBrush>
+                </PasswordBox.BorderBrush>
+            </PasswordBox>
+            <Button x:Name="GoToRegistration" Content="Регистрация" Background="Transparent" Margin="0,30,0,0" Padding="0,2" FontSize="21" Click="GoToRegistration_Click_1" FontFamily="Calibri Light" Cursor="Hand" Foreground="Black" BorderBrush="#7F000000"/>
+            <Button x:Name="loginbutton" Content="Войти" Background="Transparent" Margin="0,10,0,15" Padding="0,2" FontSize="21" Click="loginbutton_Click" FontFamily="Calibri Light" Cursor="Hand" BorderBrush="#7F000000" Foreground="Black"/>
+        </StackPanel>
+        <Image Name="CloseButton" HorizontalAlignment="Left" Height="26" Margin="334,0,-9,0" VerticalAlignment="Top" Width="36" Source="/Practicka;component/Other/Close.png" MouseDown="CloseButton_MouseDown" Stretch="Fill" Cursor="Hand"/>
+    </Grid>
+</Window>
